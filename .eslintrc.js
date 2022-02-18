@@ -14,6 +14,7 @@ module.exports = {
     'linebreak-style': 0,
     'no-console': 'off',
     'class-methods-use-this': 'off',
+    'no-promise-executor-return': 'off',
 
   },
 };
