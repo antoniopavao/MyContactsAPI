@@ -9,19 +9,15 @@ class ContactController {
   }
 
   show() {
-    // Obter 1 registro
   }
 
   store() {
-    // Criar novos registro
   }
 
   update() {
-    // Editar um registro
   }
 
   delete() {
-    // Deletar um registro
   }
 }
 
