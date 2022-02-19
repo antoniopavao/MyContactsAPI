@@ -39,7 +39,6 @@ class ContactController {
     });
 
     response.json(contact);
-    console.log(contact);
   }
 
   update() {

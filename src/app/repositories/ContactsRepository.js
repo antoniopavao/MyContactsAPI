@@ -61,7 +61,7 @@ class ContactsRepository {
       };
 
       contacts.push(newContact);
-      resolve();
+      resolve(newContact);
     });
   }
 }
