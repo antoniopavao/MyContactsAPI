@@ -6,21 +6,21 @@ let contacts = [
     name: 'Matheus Artur',
     email: 'mateus@mail.com',
     phone: '3731-4455',
-    category: v4(),
+    category_id: v4(),
   },
   {
     id: v4(),
     name: 'Jose Alfredo',
     email: 'jose.alfredo@mail.com',
     phone: '3771-4658',
-    category: v4(),
+    category_id: v4(),
   },
   {
     id: v4(),
     name: 'Antonio Pavao',
     email: 'antonio@mail.com',
     phone: '3771-4658',
-    category: v4(),
+    category_id: v4(),
   },
 ];
 
@@ -62,6 +62,26 @@ class ContactsRepository {
 
       contacts.push(newContact);
       resolve(newContact);
+    });
+  }
+
+  update(id, {
+    name, email, phone, category_id,
+  }) {
+    return new Promise((resolve) => {
+      const updatedContact = {
+        id,
+        name,
+        email,
+        phone,
+        category_id,
+      };
+
+      contacts = contacts.map((contact) => (
+        contact.id === id ? updatedContact : contact
+      ));
+
+      resolve(updatedContact);
     });
   }
 }
